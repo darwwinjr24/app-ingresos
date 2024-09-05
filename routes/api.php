@@ -14,7 +14,10 @@ use App\Http\Controllers\AutorizadoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CargoController;
 use App\Http\Controllers\RegistroVisitaRecibidaController;
-
+use App\Http\Controllers\RegistroIngresoVisitanteController;
+use App\Http\Controllers\VisitanteController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\RolController;
 
 /*
 |--------------------------------------------------------------------------
@@ -132,4 +135,36 @@ Route:: controller(RegistroVisitaRecibidaController::class)->group(function(){
     Route:: get('/registrosvisitas/buscar','obtenerDatos');
     Route:: put('/registrosvisitas/actualizar','actualizarDatos');
     Route:: delete('/registrosvisitas/eliminar','eliminarDatos');
+});
+
+// RUTAS EN GRUPO DE REGISTRO INGRESO DE VISITANTES
+Route:: controller(RegistroIngresoVisitanteController::class)->group(function(){
+    Route:: post('/registrosingresovisitantes/crear','crearDatos');
+    Route:: get('/registrosingresovisitantes/buscar','obtenerDatos');
+    Route:: put('/registrosingresovisitantes/actualizar','actualizarDatos');
+    Route:: delete('/registrosingresovisitantes/eliminar','eliminarDatos');
+});
+
+// RUTAS EN GRUPO DE VISITANTES
+Route:: controller(VisitanteController::class)->group(function(){
+    Route:: post('/visitante/crear','crearDatos');
+    Route:: get('/visitante/buscar','obtenerDatos');
+    Route:: put('/visitante/actualizar','actualizarDatos');
+    Route:: delete('/visitante/eliminar','eliminarDatos');
+});
+
+// RUTAS EN GRUPO DE EMPLEADOS
+Route:: controller(EmpleadoController::class)->group(function(){
+    Route:: post('/empleado/crear','crearDatos');
+    Route:: get('/empleado/buscar','obtenerDatos');
+    Route:: put('/empleado/actualizar','actualizarDatos');
+    Route:: delete('/empleado/eliminar','eliminarDatos');
+});
+
+// RUTAS EN GRUPO DE ROLES
+Route:: controller(RolController::class)->group(function(){
+    Route:: post('/roles/crear','crearDatos');
+    Route:: get('/roles/buscar','obtenerDatos');
+    Route:: put('/roles/actualizar','actualizarDatos');
+    Route:: delete('/roles/eliminar','eliminarDatos');
 });
