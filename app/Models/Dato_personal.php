@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dato_personal extends Model
 {
     use HasFactory;
+    
+    protected $fillable=['nombres','apellidos','numero_documento','celular','correo'];
+
 }

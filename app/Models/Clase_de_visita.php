@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Clase_de_visita extends Model
 {
     use HasFactory;
+
+    protected $fillable=['nombre'];
 }

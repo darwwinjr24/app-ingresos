@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Autorizado extends Model
 {
     use HasFactory;
+
+    protected $fillable=['nombre'];
+
 }

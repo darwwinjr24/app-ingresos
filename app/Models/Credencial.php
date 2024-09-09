@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Credencial extends Model
 {
     use HasFactory;
+
+    protected $fillable=['contraseña','usuario'];
 }
