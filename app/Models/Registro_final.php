@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Registro_final extends Model
 {
     use HasFactory;
+
+    protected $fillable=['fecha_fin','hora_fin'];
 }
